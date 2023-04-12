@@ -46,9 +46,19 @@
 
 		isSending = true;
 
-		const result = await axios.post('/api/gpt', {
-			message: question
-		});
+		const endPoint = import.meta.env.VITE_FUNCTIONS_END_POINT;
+
+		// svelteのBFFのAPI用(現在使用していない)
+		// const result = await axios.post('/api/gpt', {
+		// 	message: question
+		// });
+		// if (!result.data) {
+		// 	isSending = false;
+		// 	alert('メッセージの送信に失敗しました');
+		// 	return;
+		// }
+
+		const result = await axios.post(endPoint, { message: question });
 
 		if (!result.data) {
 			isSending = false;
