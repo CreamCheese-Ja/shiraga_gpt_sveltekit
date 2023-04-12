@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/svelte-material-ui@6.0.0/bare.min.css"
+		/>
+		<style>
+			:root {
+				font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+				line-height: 1.5;
+				font-weight: 400;
+
+				color-scheme: light dark;
+				color: rgba(255, 255, 255, 0.87);
+				background-color: #242424;
+
+				font-synthesis: none;
+				text-rendering: optimizeLegibility;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-text-size-adjust: 100%;
+			}
+
+			body {
+				margin: 0;
+				display: flex;
+				place-items: center;
+				min-width: 320px;
+				min-height: 100vh;
+			}
+
+			#app {
+				max-width: 1280px;
+				margin: 0 auto;
+				padding: 2rem;
+				text-align: center;
+			}
+		</style>
+		%sveltekit.head%
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://shiraga-gpt.vercel.app/" />
+		<meta property="og:image" content="https://shiraga-gpt.vercel.app/shiraga_gpt.png" />
+		<meta property="og:title" content="shiragaGPT" />
+		<meta property="og:description" content="shiragaGPTがなんでも答えてくれる" />
+		<title>shiraga GPT</title>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div id="app">%sveltekit.body%</div>
+	</body>
+</html>
