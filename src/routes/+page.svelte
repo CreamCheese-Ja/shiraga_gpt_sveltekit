@@ -159,7 +159,7 @@
 	.question {
 		height: 50px;
 		color: aqua;
-		overflow: scroll;
+		overflow-y: scroll;
 	}
 
 	.message {
@@ -167,7 +167,7 @@
 		opacity: initial;
 		display: flex;
 		flex-direction: column-reverse;
-		overflow: scroll;
+		overflow-y: scroll;
 	}
 
 	.input {
