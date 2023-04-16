@@ -3,18 +3,6 @@ import axios from 'axios';
 import { SECRET_API_KEY } from '$env/static/private';
 import type { RequestEvent } from '@sveltejs/kit';
 
-type RequestData = {
-	message: string;
-};
-
-const readStream = async (stream: ReadableStream) => {
-	const reader = stream.getReader();
-	const result = await reader.read();
-	const decoder = new TextDecoder();
-	const data: RequestData = JSON.parse(decoder.decode(result.value));
-	return data;
-};
-
 const API_URL = 'https://api.openai.com/v1/';
 const MODEL = 'gpt-3.5-turbo';
 
@@ -24,9 +12,9 @@ export const POST = async (request: RequestEvent) => {
 			throw new Error();
 		}
 
-		const data = await readStream(request.request.body);
+		const { message } = await request.request.json();
 
-		if (data.message.length > 100) {
+		if (message.length > 100) {
 			throw new Error();
 		}
 
@@ -42,7 +30,7 @@ export const POST = async (request: RequestEvent) => {
 					},
 					{
 						role: 'user',
-						content: data.message
+						content: message
 					}
 				]
 			},
