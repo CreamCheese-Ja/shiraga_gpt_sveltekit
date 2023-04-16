@@ -1,4 +1,3 @@
-/** @type {import('./$types').RequestHandler} */
 import axios from 'axios';
 import { SECRET_API_KEY } from '$env/static/private';
 import type { RequestEvent } from '@sveltejs/kit';
