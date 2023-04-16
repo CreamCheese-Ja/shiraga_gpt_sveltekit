@@ -90,7 +90,7 @@
 	</div>
 
 	<div hidden={isLoading}>
-		<video bind:this={video} src={gptVideo} muted loop controlsList="nodownload"
+		<video bind:this={video} src={gptVideo} playsinline muted loop controlsList="nodownload"
 			><track kind="captions" /></video
 		>
 		<div class="chat-area">
