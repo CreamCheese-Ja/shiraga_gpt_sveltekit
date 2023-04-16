@@ -160,6 +160,11 @@
 		height: 50px;
 		color: aqua;
 		overflow-y: scroll;
+		-ms-overflow-style: none;
+	}
+
+	.question::-webkit-scrollbar {
+		display: none;
 	}
 
 	.message {
@@ -168,6 +173,11 @@
 		display: flex;
 		flex-direction: column-reverse;
 		overflow-y: scroll;
+		-ms-overflow-style: none;
+	}
+
+	.message::-webkit-scrollbar {
+		display: none;
 	}
 
 	.input {
